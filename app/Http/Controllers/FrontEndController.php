@@ -19,7 +19,7 @@ class FrontEndController extends Controller
             'galery' => GaleryModel::where('aktif', 1)->get(),
             'setting' => SettingModel::where('id', 1)->get(),
         ];
-        return view('index')->with($data);
+        return view('layouts.main')->with($data);
     }
 
     public function galery($id)
