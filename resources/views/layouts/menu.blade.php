@@ -3,7 +3,7 @@
         <nav id="mobile-menu">
             <ul>
                 <li>
-                    <a href="#">Home</a>
+                    <a href="{{ route('utama') }}">Home</a>
                 </li>
                 <li>
                     <a href="#">

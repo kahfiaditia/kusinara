@@ -6,39 +6,39 @@
                 <div class="row g-5">
                     <div class="col-12 col-lg-8">
                         <div class="service-details-items">
+                            {{-- @foreach ($baru as $konten) --}}
                             <div class="details-image">
-                                <img src="{{ asset('assets2/img/logo/newsblog.png') }}" alt="img">
+                                <img src="{{ asset('files/blog/' . $baru[0]->image) }}" alt="img">
                             </div>
                             <div class="details-content">
-                                <h3>Digital Marketing</h3>
+                                <h3>{{ $baru[0]->title }}</h3>
                                 <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat qui ducimus
-                                    illum modi? perspiciatis
-                                    accusamus soluta perferendis, ad illum, nesciunt, reiciendis iusto et cupidit
-                                    Repudiandae provident to
-                                    consectetur, sapiente, libero iure necessitatibus corporis nulla voluptate,
-                                    quisquam aut perspiciatis?
-                                    Fugiat labore aspernatur eius, perspiciatis ut molestiae, delectus rem.
+                                    {!! $baru[0]->deskripsi !!}
                                 </p>
+                                {{-- @endforeach --}}
+
                                 <div class="details-image-2">
                                     <div class="row g-4">
-                                        <div class="col-lg-6">
-                                            <img src="{{ asset('assets2/img/logo/newsblog.png') }}" alt="img">
-                                            <h4>
-                                                <a href="news-details.html">
-                                                    Bermunajat Dalam Doa
-                                                </a>
-                                            </h4>
-                                        </div>
+                                        @foreach ($blog as $item)
+                                            <div class="col-lg-6">
+                                                <img src="{{ asset('assets2/img/logo/newsblog.png') }}" alt="img">
+                                                <h4>
+                                                    <a href="news-details.html">
+                                                        {{ $item->title }}
+                                                    </a>
+                                                </h4>
+                                            </div>
+                                        @endforeach
 
-                                        <div class="col-lg-6">
+
+                                        {{-- <div class="col-lg-6">
                                             <img src="{{ asset('assets2/img/logo/newsblog.png') }}" alt="img">
                                             <h4>
                                                 <a href="news-details.html">
                                                     Kajian Malam Jumat
                                                 </a>
                                             </h4>
-                                        </div>
+                                        </div> --}}
                                     </div>
                                 </div>
                             </div>
