@@ -8,12 +8,12 @@
                         <div class="service-details-items">
                             {{-- @foreach ($baru as $konten) --}}
                             <div class="details-image">
-                                <img src="{{ asset('files/blog/' . $blog[0]->image) }}" alt="img">
+                                <img src="{{ asset('files/blog/' . $pendidikan[0]->image) }}" alt="img">
                             </div>
                             <div class="details-content">
-                                <h3>{!! $blog[0]->title !!}</h3>
+                                <h3>{!! $pendidikan[0]->title !!}</h3>
                                 <p>
-                                    {!! substr($blog[0]->deskripsi, 0, 150) . '...' !!}
+                                    {!! substr($pendidikan[0]->deskripsi, 0, 150) . '...' !!}
                                 </p>
                                 {{-- @endforeach --}}
 
@@ -82,12 +82,12 @@
         </div>
     </section>
 
-    <section class="news-section-2 section-padding fix">
+    <section class="">
         <div class="container">
             <div class="title-section-area">
                 <div class="section-title">
-                    <span class="wow fadeInUp">Menu Tulisan</span>
-                    <h2 class="wow fadeInUp" data-wow-delay=".3s">Explore Blog</h2>
+                    <span class="wow fadeInUp">Tulisan</span>
+                    <h2 class="wow fadeInUp" data-wow-delay=".3s">Blog</h2>
                 </div>
                 <a href="news-details.html" class="theme-btn wow fadeInUp" data-wow-delay=".5s">
                     <span>
@@ -97,7 +97,54 @@
                 </a>
             </div>
             <div class="news-carousel-active">
-                @foreach ($blog as $item)
+                @foreach ($pendidikan as $karakter)
+                    <div class="news-card-items">
+                        <div class="news-image bg-cover"
+                            style="background-image: url('{{ asset('files/blog/' . $karakter->image) }}');">
+                        </div>
+                        <div class="news-content">
+                            <ul class="post-area">
+                                <li>
+                                    <i class="far fa-user-circle"></i>
+                                    Shikhon .H
+                                </li>
+                                <li>
+                                    <i class="fal fa-comments"></i>
+                                    Comments (03)
+                                </li>
+                            </ul>
+                            <h5>
+                                <a href="news-details.html">
+                                    {!! $karakter->title !!}
+                                </a>
+                            </h5>
+                            <a href="news-details.html" class="link-btn">
+                                <span>read more</span>
+                                <i class="fas fa-chevron-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                @endforeach
+            </div>
+        </div>
+    </section>
+
+    <section class="news-section-2 section-padding fix">
+        <div class="container">
+            <div class="title-section-area">
+                <div class="section-title">
+                    <span class="wow fadeInUp">Kajian</span>
+                    <h2 class="wow fadeInUp" data-wow-delay=".3s">Politik</h2>
+                </div>
+                <a href="news-details.html" class="theme-btn wow fadeInUp" data-wow-delay=".5s">
+                    <span>
+                        Explore Our news
+                        <i class="fas fa-chevron-right"></i>
+                    </span>
+                </a>
+            </div>
+            <div class="news-carousel-active">
+                @foreach ($politik as $item)
                     <div class="news-card-items">
                         <div class="news-image bg-cover"
                             style="background-image: url('{{ asset('files/blog/' . $item->image) }}');">
@@ -125,7 +172,6 @@
                         </div>
                     </div>
                 @endforeach
-
             </div>
         </div>
     </section>
@@ -134,8 +180,8 @@
         <div class="container">
             <div class="title-section-area">
                 <div class="section-title">
-                    <span class="wow fadeInUp">Karya</span>
-                    <h2 class="wow fadeInUp" data-wow-delay=".3s">Karya</h2>
+                    <span class="wow fadeInUp">Kajian</span>
+                    <h2 class="wow fadeInUp" data-wow-delay=".3s">Sosial</h2>
                 </div>
                 <a href="news-details.html" class="theme-btn wow fadeInUp" data-wow-delay=".5s">
                     <span>
@@ -145,10 +191,10 @@
                 </a>
             </div>
             <div class="news-carousel-active">
-                {{-- @foreach ($blog as $item)
+                @foreach ($sosials as $sosial)
                     <div class="news-card-items">
                         <div class="news-image bg-cover"
-                            style="background-image: url('{{ asset('files/blog/' . $item->image) }}');">
+                            style="background-image: url('{{ asset('files/blog/' . $sosial->image) }}');">
                         </div>
                         <div class="news-content">
                             <ul class="post-area">
@@ -163,7 +209,7 @@
                             </ul>
                             <h5>
                                 <a href="news-details.html">
-                                    {{ $item->title }}
+                                    {{ $sosial->title }}
                                 </a>
                             </h5>
                             <a href="news-details.html" class="link-btn">
@@ -172,7 +218,7 @@
                             </a>
                         </div>
                     </div>
-                @endforeach --}}
+                @endforeach
             </div>
         </div>
     </section>

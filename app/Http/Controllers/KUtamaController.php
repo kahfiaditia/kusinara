@@ -17,17 +17,13 @@ class KUtamaController extends Controller
      */
     public function index()
     {
-        $result = DB::select('SELECT title, deskripsi, image FROM blog WHERE id = (SELECT MAX(id) FROM blog)');
-
-        if (!empty($result)) {
-            $result[0]->deskripsi = Str::limit($result[0]->deskripsi, 150);
-        }
 
         $data = [
             'title' => $this->title,
             'menu' => 'List ' . $this->title,
-            'blog' => BlogModel::all(),
-            'baru' => $result,
+            'pendidikan' => BlogModel::where('id_kategori', 1)->get(),
+            'politik' => BlogModel::where('id_kategori', 3)->get(),
+            'sosials' => BlogModel::where('id_kategori', 2)->get(),
         ];
 
         return view('utama.index')->with($data);
