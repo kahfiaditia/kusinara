@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Helper\AlertHelper;
 use App\Models\BlogModel;
+use App\Models\KategoriModel;
 use App\Models\SettingModel;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
@@ -24,11 +25,13 @@ class BlogController extends Controller
     public function index()
     {
         $list = BlogModel::all();
+
         $data = [
             'title' => $this->title,
             'menu' => 'list ' . $this->title,
             'setting' => SettingModel::where('id', 1)->get(),
             'lists' => $list
+
         ];
         return view('admin.blog.list')->with($data);
     }
@@ -40,10 +43,12 @@ class BlogController extends Controller
      */
     public function create()
     {
+        $kategories = KategoriModel::all();
         $data = [
             'title' => $this->title,
             'menu' => 'add ' . $this->title,
             'setting' => SettingModel::where('id', 1)->get(),
+            'kategori' => $kategories
         ];
         return view('admin.blog.create')->with($data);
     }
@@ -57,12 +62,14 @@ class BlogController extends Controller
     public function store(Request $request)
     {
         $validated = $request->validate([
+            'kategori' => 'required',
             'title' => 'required',
             'deskripsi' => 'required',
         ]);
         DB::beginTransaction();
         try {
             $store = new BlogModel();
+            $store->id_kategori = $request->kategori;
             $store->title = $request->title;
             $store->deskripsi = $request->deskripsi;
             // upload file

@@ -3,8 +3,9 @@
         <li class="menu-title">Master</li>
         <li><a href="{{ route('akun.index') }}"><i class="mdi mdi-account-multiple"></i><span>Akun</span></a></li>
         <li><a href="{{ route('slider.index') }}"><i class="mdi mdi-postage-stamp"></i><span>Slider</span></a></li>
-        <li><a href="{{ route('blog.index') }}"><i class="mdi mdi-room-service"></i><span>Blog</span></a></li>
-        <li><a href="{{ route('galery.index') }}"><i class="mdi mdi-z-wave"></i><span>Galery</span></a></li>
+        <li><a href="{{ route('kategori.index') }}"><i class="mdi mdi-postage-stamp"></i><span>Kategori</span></a></li>
+        <li><a href="{{ route('blog.index') }}"><i class="mdi mdi-room-service"></i><span>Artikel</span></a></li>
+        {{-- <li><a href="{{ route('galery.index') }}"><i class="mdi mdi-z-wave"></i><span>Galery</span></a></li> --}}
         <li><a href="{{ route('about.index') }}"><i class="mdi mdi-format-list-numbered"></i><span>About</span></a>
         <li><a href="{{ route('contact_us.index') }}"><i class="mdi mdi-message-bulleted"></i><span>Contact
                     Us</span></a></li>

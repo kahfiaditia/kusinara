@@ -8,6 +8,16 @@
                     <form class="" action="{{ route('blog.store') }}" enctype="multipart/form-data" method="POST">
                         @csrf
                         <div class="form-group">
+                            <label>Kategori</label>
+                            <select class="form-control select select2 kategori" name="kategori" id="kategori">
+                                <option value=""> -- Pilih Kategori --</option>
+                                @foreach ($kategori as $data)
+                                    <option value="{{ $data->id }}"> {{ $data->nama }}</option>
+                                @endforeach
+                            </select>
+                            <small class="text-danger">{{ $errors->first('kategori') }}</small>
+                        </div>
+                        <div class="form-group">
                             <label>Title</label>
                             <input type="text" class="form-control" name="title" value="{{ old('title') }}" required
                                 placeholder="Title" />
@@ -28,7 +38,8 @@
                             <button type="submit" class="btn btn-primary waves-effect waves-light">
                                 Simpan
                             </button>
-                            <a href="{{ route('blog.index') }}" type="reset" class="btn btn-secondary waves-effect m-l-5">
+                            <a href="{{ route('blog.index') }}" type="reset"
+                                class="btn btn-secondary waves-effect m-l-5">
                                 Kembali
                             </a>
                         </div>

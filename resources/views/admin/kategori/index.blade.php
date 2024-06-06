@@ -10,7 +10,7 @@
                                 <h4 class="page-title mb-2">{{ $menu }}
                                 </h4>
                                 <div class="float-right align-item-center mt-2">
-                                    <a href="{{ route('blog.create') }}"
+                                    <a href="{{ route('kategori.create') }}"
                                         class="btn btn-info px-4 align-self-center report-btn">Add Data</a>
                                 </div>
                             </div>
@@ -21,10 +21,7 @@
                         <thead>
                             <tr>
                                 <th>No</th>
-                                <th>Kategori</th>
-                                <th>Image</th>
-                                <th>Title</th>
-                                <th>Deskripsi</th>
+                                <th>Nama</th>
                                 <th>Status</th>
                                 <th>Action</th>
                             </tr>
@@ -33,39 +30,7 @@
                             @foreach ($lists as $list)
                                 <tr>
                                     <td>{{ $loop->iteration }}</td>
-                                    <td>{{ $list->kategori->nama }}</td>
-                                    <td class="text-center">
-                                        @if ($list->image != null)
-                                            <img src="{{ URL::asset('files/blog/' . $list->image) }}" width="45x"
-                                                alt="profile-user" class="rounded-circle" />
-                                        @endif
-                                    </td>
-                                    <td>
-                                        <?php
-                                        if (strlen($list->title) > 25) {
-                                            $titik = '...';
-                                        } else {
-                                            $titik = null;
-                                        }
-                                        ?>
-                                        <label data-toggle="tooltip" data-placement="top" title=""
-                                            data-original-title="{{ $list->title }}" aria-describedby="tooltip121408">
-                                            {{ substr($list->title, 0, 25) . $titik }}
-                                        </label>
-                                    </td>
-                                    <td>
-                                        <?php
-                                        if (strlen($list->deskripsi) > 30) {
-                                            $titik = '...';
-                                        } else {
-                                            $titik = null;
-                                        }
-                                        ?>
-                                        <label data-toggle="tooltip" data-placement="top"
-                                            data-original-title="{{ $list->deskripsi }}" aria-describedby="tooltip121408">
-                                            {{ substr($list->deskripsi, 0, 30) . $titik }}
-                                        </label>
-                                    </td>
+                                    <td>{{ $list->nama }}</td>
                                     <td>
                                         <label data-toggle="tooltip" data-placement="top"
                                             data-original-title="{{ $list->aktif == '1' ? 'Aktif' : 'Non Aktif' }}"
@@ -75,11 +40,12 @@
                                     </td>
                                     <td>
                                         <?php $id = Crypt::encryptString($list->id); ?>
-                                        <form class="delete-form" action="{{ route('blog.destroy', $id) }}" method="POST">
+                                        <form class="delete-form" action="{{ route('kategori.destroy', $id) }}"
+                                            method="POST">
                                             @csrf
                                             @method('DELETE')
                                             <div class="btn-group" role="group">
-                                                <a href="{{ route('blog.edit', $id) }}" class="btn btn-warning btn-sm"
+                                                <a href="{{ route('kategori.edit', $id) }}" class="btn btn-warning btn-sm"
                                                     data-toggle="tooltip" data-placement="top" title="Edit">
                                                     <i class="mdi mdi-pencil"></i>
                                                 </a>

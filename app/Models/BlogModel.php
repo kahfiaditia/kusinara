@@ -15,4 +15,9 @@ class BlogModel extends Model
     {
         return $this->belongsTo(User::class, 'user_create');
     }
+
+    public function kategori()
+    {
+        return $this->belongsTo(KategoriModel::class, 'id_kategori');
+    }
 }

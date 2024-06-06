@@ -6,6 +6,7 @@ use App\Http\Controllers\BlogController;
 use App\Http\Controllers\ContactUsController;
 use App\Http\Controllers\FrontEndController;
 use App\Http\Controllers\GaleryController;
+use App\Http\Controllers\KKategoriController;
 use App\Http\Controllers\KUtamaController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginController;
@@ -29,7 +30,7 @@ use App\Models\BlogModel;
 |
 */
 
-Route::get('/', [FrontEndController::class, 'index'])->name('index');
+Route::get('/utama', [FrontEndController::class, 'index'])->name('index');
 Route::get('/utama', [KUtamaController::class, 'index'])->name('utama');
 Route::get('/blogs', [FrontEndController::class, 'blogs'])->name('blogs');
 Route::get('/blog/{id}', [FrontEndController::class, 'blog'])->name('blog');
@@ -65,5 +66,6 @@ Route::group(
         Route::resource('/galery', GaleryController::class);
         Route::resource('/setting', SettingController::class);
         Route::resource('/member', MemberController::class);
+        Route::resource('/kategori', KKategoriController::class);
     }
 );
