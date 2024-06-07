@@ -2,15 +2,13 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Support\Str;
 use App\Models\BlogModel;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Crypt;
-use Illuminate\Support\Facades\DB;
 
-class KUtamaController extends Controller
+class KsosialController extends Controller
 {
-    protected $title = 'utama';
+    protected $title = 'sosial';
+
     /**
      * Display a listing of the resource.
      *
@@ -18,16 +16,14 @@ class KUtamaController extends Controller
      */
     public function index()
     {
-
+        $list = BlogModel::all();
         $data = [
             'title' => $this->title,
-            'menu' => 'List ' . $this->title,
-            'pendidikan' => BlogModel::where('id_kategori', 1)->get(),
-            'politik' => BlogModel::where('id_kategori', 3)->get(),
-            'sosials' => BlogModel::where('id_kategori', 2)->get(),
+            'menu' => 'list ' . $this->title,
+            'lists' => $list,
+            'sosial' => BlogModel::where('id_kategori', 2)->get(),
         ];
-
-        return view('utama.index')->with($data);
+        return view('sosial.index')->with($data);
     }
 
     /**
@@ -59,16 +55,7 @@ class KUtamaController extends Controller
      */
     public function show($id)
     {
-
-        $id_decrypt = Crypt::decryptString($id);
-
-        $data = [
-            'title' => $this->title,
-            'menu' => 'Detil ' . $this->title,
-            'detils' => BlogModel::findOrFail($id_decrypt),
-        ];
-
-        return view('lihat')->with($data);
+        //
     }
 
     /**

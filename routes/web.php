@@ -7,6 +7,7 @@ use App\Http\Controllers\ContactUsController;
 use App\Http\Controllers\FrontEndController;
 use App\Http\Controllers\GaleryController;
 use App\Http\Controllers\KKategoriController;
+use App\Http\Controllers\KsosialController;
 use App\Http\Controllers\KUtamaController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginController;
@@ -33,11 +34,13 @@ use App\Models\BlogModel;
 
 Route::get('/', [FrontEndController::class, 'index'])->name('index');
 Route::get('/utama', [KUtamaController::class, 'index'])->name('utama');
+Route::get('/detilberita/{id}', [KUtamaController::class, 'show'])->name('detilberita');
 Route::get('/pendidikan', [PendidikanController::class, 'index'])->name('pendidikan');
-Route::get('/blogs', [FrontEndController::class, 'blogs'])->name('blogs');
-Route::get('/blog/{id}', [FrontEndController::class, 'blog'])->name('blog');
-Route::get('/galery/{id}', [FrontEndController::class, 'galery'])->name('galery');
-Route::get('/about', [FrontEndController::class, 'about'])->name('about');
+Route::get('/sosial', [KsosialController::class, 'index'])->name('sosial');
+// Route::get('/blogs', [FrontEndController::class, 'blogs'])->name('blogs');
+// Route::get('/blog/{id}', [FrontEndController::class, 'blog'])->name('blog');
+// Route::get('/galery/{id}', [FrontEndController::class, 'galery'])->name('galery');
+// Route::get('/about', [FrontEndController::class, 'about'])->name('about');
 
 Route::get('/login', function () {
     return view('admin.login.login');
