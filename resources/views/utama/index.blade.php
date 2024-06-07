@@ -11,26 +11,14 @@
                                 <img src="{{ asset('files/blog/' . $pendidikan[0]->image) }}" alt="img">
                             </div>
                             <div class="details-content">
-                                <h3>{!! $pendidikan[0]->title !!}</h3>
+                                <h3>
+                                    <a href="#">
+                                        {!! $pendidikan[0]->title !!}
+                                    </a>
+                                </h3>
                                 <p>
                                     {!! substr($pendidikan[0]->deskripsi, 0, 150) . '...' !!}
                                 </p>
-                                {{-- @endforeach --}}
-
-                                {{-- <div class="details-image-2">
-                                    <div class="row g-4">
-                                        @foreach ($blog as $item)
-                                            <div class="col-lg-6">
-                                                <img src="{{ asset('assets2/img/logo/newsblog.png') }}" alt="img">
-                                                <h4>
-                                                    <a href="news-details.html">
-                                                        {{ $item->title }}
-                                                    </a>
-                                                </h4>
-                                            </div>
-                                        @endforeach
-                                    </div>
-                                </div> --}}
                             </div>
                         </div>
                     </div>

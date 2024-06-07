@@ -11,6 +11,7 @@ use App\Http\Controllers\KUtamaController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\MemberController;
+use App\Http\Controllers\PendidikanController;
 use App\Http\Controllers\ProdukController;
 use App\Http\Controllers\ProjectController;
 use App\Http\Controllers\ServicesController;
@@ -30,8 +31,9 @@ use App\Models\BlogModel;
 |
 */
 
-Route::get('/utama', [FrontEndController::class, 'index'])->name('index');
+Route::get('/', [FrontEndController::class, 'index'])->name('index');
 Route::get('/utama', [KUtamaController::class, 'index'])->name('utama');
+Route::get('/pendidikan', [PendidikanController::class, 'index'])->name('pendidikan');
 Route::get('/blogs', [FrontEndController::class, 'blogs'])->name('blogs');
 Route::get('/blog/{id}', [FrontEndController::class, 'blog'])->name('blog');
 Route::get('/galery/{id}', [FrontEndController::class, 'galery'])->name('galery');
@@ -67,5 +69,6 @@ Route::group(
         Route::resource('/setting', SettingController::class);
         Route::resource('/member', MemberController::class);
         Route::resource('/kategori', KKategoriController::class);
+        Route::resource('/pendidikan', PendidikanController::class);
     }
 );

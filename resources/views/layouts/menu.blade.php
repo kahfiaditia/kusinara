@@ -11,7 +11,7 @@
                         <i class="fas fa-angle-down"></i>
                     </a>
                     <ul class="submenu">
-                        <li><a href="#">Pendidikan</a></li>
+                        <li><a href="{{ route('pendidikan') }}">Pendidikan</a></li>
                         <li><a href="#">Sosial</a></li>
                         <li><a href="#">Politik</a></li>
                     </ul>
