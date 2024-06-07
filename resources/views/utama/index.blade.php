@@ -8,7 +8,7 @@
                         <div class="col-xl-8 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".3s">
                             <div class="single-team-items">
                                 <div class="team-image">
-                                    <img src="{{ asset('files/blog/' . $pendidikan[0]->image) }}" alt="team-img">
+                                    <img src="{{ asset('files/blog/' . $baru[0]->image) }}" alt="team-img">
                                     <div class="social-profile">
                                         <span class="plus-btn"><i class="fas fa-share-alt"></i></span>
                                         <ul>
@@ -23,11 +23,11 @@
                                 </div>
                                 <div class="team-content text-center">
                                     <h4>
-                                        <a href="{{ route('detilberita', Crypt::encryptString($pendidikan[0]->id)) }}">
-                                            {!! $pendidikan[0]->title !!}
+                                        <a href="{{ route('detilberita', Crypt::encryptString($baru[0]->id)) }}">
+                                            {!! $baru[0]->title !!}
                                         </a>
                                     </h4>
-                                    <p>{!! $pendidikan[0]->kategori->nama !!}</p>
+                                    <p>{!! $baru[0]->kategori->nama !!}</p>
                                 </div>
                             </div>
                         </div>
@@ -78,8 +78,8 @@
         <div class="container">
             <div class="title-section-area">
                 <div class="section-title">
-                    <span class="wow fadeInUp">Tulisan</span>
-                    <h2 class="wow fadeInUp" data-wow-delay=".3s">Blog</h2>
+                    <span class="wow fadeInUp">Kajian</span>
+                    <h2 class="wow fadeInUp" data-wow-delay=".3s">Pendidikan</h2>
                 </div>
                 <a href="#" class="theme-btn wow fadeInUp" data-wow-delay=".5s">
                     <span>
@@ -111,7 +111,7 @@
                                 </a>
                             </h5>
                             <a href="{{ route('detilberita', Crypt::encryptString($karakter->id)) }}" class="link-btn">
-                                <span>read more</span>
+                                <span>Selengkapnya</span>
                                 <i class="fas fa-chevron-right"></i>
                             </a>
                         </div>
@@ -157,8 +157,8 @@
                                     {!! $item->title !!}
                                 </a>
                             </h5>
-                            <a href="#" class="link-btn">
-                                <span>read more</span>
+                            <a href="{{ route('detilberita', Crypt::encryptString($item->id)) }}" class="link-btn">
+                                <span>Selengkapnya</span>
                                 <i class="fas fa-chevron-right"></i>
                             </a>
                         </div>
@@ -200,12 +200,12 @@
                                 </li>
                             </ul>
                             <h5>
-                                <a href="#">
+                                <a href="{{ route('detilberita', Crypt::encryptString($sosial->id)) }}">
                                     {{ $sosial->title }}
                                 </a>
                             </h5>
-                            <a href="#" class="link-btn">
-                                <span>read more</span>
+                            <a href="{{ route('detilberita', Crypt::encryptString($sosial->id)) }}" class="link-btn">
+                                <span>Selengkapnya</span>
                                 <i class="fas fa-chevron-right"></i>
                             </a>
                         </div>

@@ -4,7 +4,7 @@
         style="background-image: url('{{ asset('files/blog/kecilbanner.png') }}');">
         <div class="container">
             <div class="page-heading">
-                <h1 class="wow fadeInUp" data-wow-delay=".3s">standard blog</h1>
+                <h1 class="wow fadeInUp" data-wow-delay=".3s">{{ $detils->kategori->nama }}</h1>
                 <ul class="breadcrumb-items wow fadeInUp" data-wow-delay=".5s">
                     <li>
                         <a href="index.html">
@@ -71,68 +71,22 @@
                         <div class="main-sidebar">
                             <div class="single-sidebar-widget">
                                 <div class="wid-title">
-                                    <h3>Search</h3>
-                                </div>
-                                <div class="search_widget">
-                                    <form action="#">
-                                        <input type="text" placeholder="Keywords here....">
-                                        <button type="submit"><i class="fal fa-search"></i></button>
-                                    </form>
-                                </div>
-                            </div>
-                            <div class="single-sidebar-widget">
-                                <div class="wid-title">
                                     <h3>Popular Feeds</h3>
                                 </div>
                                 <div class="popular-posts">
-                                    <div class="single-post-item">
-                                        <div class="thumb bg-cover"
-                                            style="background-image: url('assets/img/news/pp1.jpg');"></div>
-                                        <div class="post-content">
-                                            <h5><a href="news-details.html">Keep your business safe and
-                                                    ensure high</a></h5>
-                                            <div class="post-date">
-                                                <i class="far fa-calendar-alt"></i>24th March 2024
+                                    @foreach ($news as $item)
+                                        <div class="single-post-item">
+                                            <div class="thumb bg-cover"
+                                                style="background-image: url('{{ asset('files/blog/' . $item->image) }}');">
+                                            </div>
+                                            <div class="post-content">
+                                                <h5><a href="news-details.html">{!! $item->title !!}</a></h5>
+                                                <div class="post-date">
+                                                    <i class="far fa-calendar-alt"></i>{{ $item->created_at }}
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="single-post-item">
-                                        <div class="thumb bg-cover"
-                                            style="background-image: url('assets/img/news/pp2.jpg');"></div>
-                                        <div class="post-content">
-                                            <h5><a href="news-details.html">We’ve been a strategy
-                                                    thought leader for nearly</a></h5>
-                                            <div class="post-date">
-                                                <i class="far fa-calendar-alt"></i>25th March 2024
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="single-post-item">
-                                        <div class="thumb bg-cover"
-                                            style="background-image: url('assets/img/news/pp3.jpg');"></div>
-                                        <div class="post-content">
-                                            <h5><a href="news-details.html">This week’s top stories and
-                                                    about It</a></h5>
-                                            <div class="post-date">
-                                                <i class="far fa-calendar-alt"></i>26th March 2024
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="single-sidebar-widget">
-                                <div class="wid-title">
-                                    <h3>Categories</h3>
-                                </div>
-                                <div class="widget_categories">
-                                    <ul>
-                                        <li><a href="news.html">Cloud Service <span>23</span></a></li>
-                                        <li><a href="news.html">Web Development <span>24</span></a></li>
-                                        <li><a href="news.html">Ui/Ux Designing <span>11</span></a></li>
-                                        <li><a href="news.html">IT Management <span>05</span></a></li>
-                                        <li><a href="news.html">Data Visualization <span>06</span></a></li>
-                                        <li><a href="news.html">Security System <span>10</span></a></li>
-                                    </ul>
+                                    @endforeach
                                 </div>
                             </div>
                             <div class="single-sidebar-widget">
@@ -145,20 +99,6 @@
                                     <a href="#"><i class="fab fa-instagram"></i></a>
                                     <a href="#"><i class="fab fa-linkedin-in"></i></a>
                                     <a href="#"><i class="fab fa-youtube"></i></a>
-                                </div>
-                            </div>
-                            <div class="single-sidebar-widget">
-                                <div class="wid-title">
-                                    <h3>Popular Tags</h3>
-                                </div>
-                                <div class="tagcloud">
-                                    <a href="news.html">IT Technology</a>
-                                    <a href="news-details.html">Software</a>
-                                    <a href="news-details.html">Design</a>
-                                    <a href="news-details.html">Service</a>
-                                    <a href="news-details.html">Development</a>
-                                    <a href="news-details.html">Digital</a>
-                                    <a href="news-details.html">Cyber</a>
                                 </div>
                             </div>
                         </div>
