@@ -13,7 +13,7 @@
                     <ul class="submenu">
                         <li><a href="{{ route('pendidikan') }}">Pendidikan</a></li>
                         <li><a href="{{ route('sosial') }}">Sosial</a></li>
-                        <li><a href="#">Politik</a></li>
+                        <li><a href="{{ route('politik') }}">Politik</a></li>
                     </ul>
                 </li>
                 <li>
