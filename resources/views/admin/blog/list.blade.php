@@ -33,7 +33,7 @@
                             @foreach ($lists as $list)
                                 <tr>
                                     <td>{{ $loop->iteration }}</td>
-                                    <td>{{ $list->kategori->nama }}</td>
+                                    <td>{{ $list->kategori ? $list->kategori->nama : '' }}</td>
                                     <td class="text-center">
                                         @if ($list->image != null)
                                             <img src="{{ URL::asset('files/blog/' . $list->image) }}" width="45x"
