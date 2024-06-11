@@ -20,7 +20,7 @@ class KBeritaController extends Controller
             'title' => $this->title,
             'menu' => 'list ' . $this->title,
             'lists' => $list,
-            'politik' => BlogModel::where('id_kategori', 3)->get(),
+            'berita' => BlogModel::where('id_kategori', 6)->get(),
         ];
         return view('tulisan.berita')->with($data);
     }

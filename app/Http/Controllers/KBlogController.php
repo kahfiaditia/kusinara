@@ -20,7 +20,7 @@ class KBlogController extends Controller
             'title' => $this->title,
             'menu' => 'list ' . $this->title,
             'lists' => $list,
-            'politik' => BlogModel::where('id_kategori', 3)->get(),
+            'blogss' => BlogModel::where('id_kategori', 5)->get(),
         ];
         return view('tulisan.blog')->with($data);
     }

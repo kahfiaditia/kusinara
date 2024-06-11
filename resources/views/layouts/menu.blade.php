@@ -22,9 +22,9 @@
                         <i class="fas fa-angle-down"></i>
                     </a>
                     <ul class="submenu">
-                        <li><a href="#">Artikel</a></li>
-                        <li><a href="#">Blog</a></li>
-                        <li><a href="#">Berita</a></li>
+                        <li><a href="{{ route('artikel') }}">Artikel</a></li>
+                        <li><a href="{{ route('blogss') }}">Blog</a></li>
+                        <li><a href="{{ route('berita') }}">Berita</a></li>
                     </ul>
                 </li>
                 <li>

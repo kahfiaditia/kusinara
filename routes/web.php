@@ -6,6 +6,9 @@ use App\Http\Controllers\BlogController;
 use App\Http\Controllers\ContactUsController;
 use App\Http\Controllers\FrontEndController;
 use App\Http\Controllers\GaleryController;
+use App\Http\Controllers\KArtikelController;
+use App\Http\Controllers\KBeritaController;
+use App\Http\Controllers\KBlogController;
 use App\Http\Controllers\KKategoriController;
 use App\Http\Controllers\KPolitikController;
 use App\Http\Controllers\KsosialController;
@@ -39,10 +42,9 @@ Route::get('/detilberita/{id}', [KUtamaController::class, 'show'])->name('detilb
 Route::get('/pendidikan', [PendidikanController::class, 'index'])->name('pendidikan');
 Route::get('/sosial', [KsosialController::class, 'index'])->name('sosial');
 Route::get('/politik', [KPolitikController::class, 'index'])->name('politik');
-// Route::get('/blogs', [FrontEndController::class, 'blogs'])->name('blogs');
-// Route::get('/blog/{id}', [FrontEndController::class, 'blog'])->name('blog');
-// Route::get('/galery/{id}', [FrontEndController::class, 'galery'])->name('galery');
-// Route::get('/about', [FrontEndController::class, 'about'])->name('about');
+Route::get('/artikel', [KArtikelController::class, 'index'])->name('artikel');
+Route::get('/blogss', [KBlogController::class, 'index'])->name('blogss');
+Route::get('/berita', [KBeritaController::class, 'index'])->name('berita');
 
 Route::get('/login', function () {
     return view('admin.login.login');

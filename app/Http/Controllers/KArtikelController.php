@@ -21,7 +21,7 @@ class KArtikelController extends Controller
             'title' => $this->title,
             'menu' => 'list ' . $this->title,
             'lists' => $list,
-            'politik' => BlogModel::where('id_kategori', 3)->get(),
+            'artikel' => BlogModel::where('id_kategori', 4)->get(),
         ];
         return view('tulisan.artikel')->with($data);
     }
