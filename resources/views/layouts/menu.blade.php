@@ -33,13 +33,13 @@
                         <i class="fas fa-angle-down"></i>
                     </a>
                     <ul class="submenu">
-                        <li><a href="#">Cerpen</a></li>
-                        <li><a href="#">Puisi</a></li>
-                        <li><a href="#">Pantun</a></li>
+                        <li><a href="{{ route('cerpen') }}">Cerpen</a></li>
+                        <li><a href="{{ route('puisi') }}">Puisi</a></li>
+                        <li><a href="{{ route('pantun') }}">Pantun</a></li>
                     </ul>
                 </li>
                 <li>
-                    <a href="#">Tentang</a>
+                    <a href="{{ route('tentangku') }}">Tentang</a>
                 </li>
             </ul>
         </nav>

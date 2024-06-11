@@ -23,6 +23,7 @@ use App\Http\Controllers\ServicesController;
 use App\Http\Controllers\SettingController;
 use App\Http\Controllers\SlidersController;
 use App\Http\Controllers\TeamController;
+use App\Http\Controllers\TentangController;
 use App\Models\BlogModel;
 
 /*
@@ -45,6 +46,10 @@ Route::get('/politik', [KPolitikController::class, 'index'])->name('politik');
 Route::get('/artikel', [KArtikelController::class, 'index'])->name('artikel');
 Route::get('/blogss', [KBlogController::class, 'index'])->name('blogss');
 Route::get('/berita', [KBeritaController::class, 'index'])->name('berita');
+Route::get('/tentangku', [TentangController::class, 'index'])->name('tentangku');
+Route::get('/cerpen', [TentangController::class, 'cerpen'])->name('cerpen');
+Route::get('/puisi', [TentangController::class, 'puisi'])->name('puisi');
+Route::get('/pantun', [TentangController::class, 'pantun'])->name('pantun');
 
 Route::get('/login', function () {
     return view('admin.login.login');

@@ -208,15 +208,6 @@
                                         </h6>
                                     </div>
                                 </div>
-                                <div class="header-button">
-                                    <div class="social-icon d-flex align-items-center">
-                                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                                        <a href="#"><i class="fab fa-twitter"></i></a>
-                                        <a href="#"><i class="fab fa-vimeo-v"></i></a>
-                                        <a href="#"><i class="fab fa-pinterest-p"></i></a>
-                                    </div>
-
-                                </div>
                                 <div class="header__hamburger d-xl-none my-auto">
                                     <div class="sidebar__toggle">
                                         <i class="far fa-bars"></i>
