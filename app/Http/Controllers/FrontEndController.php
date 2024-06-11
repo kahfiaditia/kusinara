@@ -11,15 +11,21 @@ use Illuminate\Support\Facades\Crypt;
 
 class FrontEndController extends Controller
 {
+    protected $title = 'utama';
+
     public function index()
     {
+        $baru = BlogModel::orderBy('id', 'desc')->limit(3)->get();
         $data = [
-            'sliders' => SlidersModel::where('aktif', 1)->get(),
-            'blog' => BlogModel::where('aktif', 1)->get(),
-            'galery' => GaleryModel::where('aktif', 1)->get(),
-            'setting' => SettingModel::where('id', 1)->get(),
+            'title' => $this->title,
+            'menu' => 'List ' . $this->title,
+            'baru' =>  $baru,
+            'pendidikan' => BlogModel::where('id_kategori', 1)->get(),
+            'politik' => BlogModel::where('id_kategori', 3)->get(),
+            'sosials' => BlogModel::where('id_kategori', 2)->get(),
         ];
-        return view('layouts.main')->with($data);
+
+        return view('utama.index')->with($data);
     }
 
     public function galery($id)

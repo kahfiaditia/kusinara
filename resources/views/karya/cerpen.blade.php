@@ -3,13 +3,13 @@
     <section class="product-section fix section-padding">
         <div class="container">
             <div class="row g-4">
-                @foreach ($sosial as $item)
+                @foreach ($cerpen as $item)
                     <div class="col-xl-3 col-lg-4 col-md-6">
                         <div class="product-card-items mt-0">
                             <div class="product-image">
                                 <img src="{{ asset('files/blog/' . $item->image) }}" alt="img">
                                 <div class="product-badge">
-                                    <span class="product-badge-item">Sosial</span>
+                                    <span class="product-badge-item">Pendidikan</span>
                                 </div>
                                 <ul class="product-icon d-grid justify-content-center align-items-center">
                                     <li>

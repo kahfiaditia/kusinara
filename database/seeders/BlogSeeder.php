@@ -21,6 +21,7 @@ class BlogSeeder extends Seeder
         $blog = [
             [
                 'image' => 'lenong.jpeg',
+                'id_kategori' => 1,
                 'title' => 'Pencak Silat Betawi',
                 'deskripsi' => '<p style="text-align: justify;">"Silat Betawi merupakan kejeniusan lokal yang mewarnai sejarah Jakarta."</p>
                 <p style="text-align: justify;">Pencak silat telah ditetapkan sebagai salah satu warisan budaya tak benda dunia dari Indonesia oleh Organisasi Pendidikan, Ilmu Pengetahuan, dan Kebudayaan Perserikatan Bangsa-Bangsa (UNESCO) di Kolombia, 9-14 Desember 2019. Status tersebut diberikan karena pencak silat, termasuk silat Betawi dalam kelompok alirannya, dinilai memiliki akar tradisi yang kuat, terutama dalam dua aspek, yaitu bela diri dan mental-spiritual. Dilansir dari lembagakebudayaanbetawi.org, sejarah silat betawi tidak terlepas dari sejarah perkembangan dan dinamika kota Jakarta. Sejak masih bernama Batavia, kota ini sudah menjadi kota kosmopolitan yang merupakan tempat pertemuan berbagai ragam budaya dan suku bangsa.</p>
@@ -39,6 +40,7 @@ class BlogSeeder extends Seeder
             ],
             [
                 'image' => 'palang_pintu.jpeg',
+                'id_kategori' => 2,
                 'title' => 'Palang Pintu',
                 'deskripsi' => '<p style="text-align: justify;"><em>"Bagi masyarakat Betawi, tradisi ini melambangkan besarnya perlindungan orang tua terhadap putrinya sebelum dipinang. Sedangkan bagi pihak laki-laki, Palang Pintu dapat menunjukkan kesungguhannya yang akan membangun rumah tangga bersama perempuan pilihannya."</em></p>
                 <p style="text-align: justify;">Palang Pintu merupakan tradisi yang menjadi bagian dari upacara pernikahan masyarakat Betawi. Palang pintu menggabungkan seni beladiri dengan seni sastra pantun. Dalam tradisi ini, jawara yang bertindak sebagai perwakilan mempelai laki-laki dan perempuan akan saling menunjukan kemampuan memperagakan gerakan silat dan melontarkan pantun satu sama lain. Setelah menunjukkan beberapa gerakan silat dan saling berbalas pantun, baru rombongan mempelai pria bisa masuk ke area rumah mempelai perempuan untuk melanjutkan prosesi pernikahan.</p>
@@ -60,6 +62,7 @@ class BlogSeeder extends Seeder
             ],
             [
                 'image' => 'silat.png',
+                'id_kategori' => 3,
                 'title' => 'Lenong Betawi',
                 'deskripsi' => '<p style="text-align: justify;">"Lenong adalah kesenian teater tradisional, atau sandiwara rakyat Betawi yang dibawakan dalam dialek Betawi, berasal dari Jakarta."</p>
                 <p style="text-align: justify;">Kesenian tradisional ini diiringi musik gambang kromong dengan alat musik, seperti gambang, kromong, gong, kendang, kempor, suling, dan kecrek, serta alat musik unsur Tionghoa, seperti tehyan, kongahyan, dan sukong. Lakon atau skenario lenong umumnya mengandung pesan moral, seperti menolong yang lemah, serta membenci kerakusan dan perbuatan tercela. Adapun bahasa yang digunakan dalam lenong adalah Melayu atau dialek Betawi. Lenong berkembang sejak akhir abad ke-19 atau awal abad ke-20. Kesenian tersebut merupakan adaptasi dari masyarakat Betawi atas kesenian serupa seperti "komedi bangsawan" dan "teater stambul" yang sudah ada saat itu.</p>

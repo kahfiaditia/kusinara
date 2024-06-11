@@ -145,7 +145,7 @@
                             <ul class="post-area">
                                 <li>
                                     <i class="far fa-user-circle"></i>
-                                    {{ Auth::user()->name }}
+                                    {{ $item->user->name }}
                                 </li>
                                 <li>
                                     <i class="fal fa-comments"></i>
@@ -192,7 +192,7 @@
                             <ul class="post-area">
                                 <li>
                                     <i class="far fa-user-circle"></i>
-                                    {{ Auth::user()->name }}
+                                    {{ $sosial->user->name }}
                                 </li>
                                 <li>
                                     <i class="fal fa-comments"></i>

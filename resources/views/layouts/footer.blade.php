@@ -57,12 +57,12 @@
                         </div>
                         <ul class="list-items">
                             <li>
-                                <a href="service-details.html">
+                                <a href="">
                                     Kajian
                                 </a>
                             </li>
                             <li>
-                                <a href="about.html">
+                                <a href="">
                                     Tulisan
                                 </a>
                             </li>
@@ -72,7 +72,7 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="team.html">
+                                <a href="">
                                     Tentang
                                 </a>
                             </li>
@@ -85,7 +85,7 @@
                             <h5>Donasi</h5>
                         </div>
                         <div class="widget-body">
-                            <img src="{{ 'assets2/img/logo/qr.jpg' }}" alt="Donasi Image" class="img-fluid">
+                            <img src="{{ asset('assets2/img/logo/qr.jpg') }}" alt="Donasi Image" class="img-fluid">
                         </div>
                     </div>
                 </div>
