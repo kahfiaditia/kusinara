@@ -77,7 +77,7 @@
         <div class="col-lg-9 p-0 d-flex justify-content-center">
             <div class="accountbg d-flex align-items-center">
                 <div class="account-title text-white text-center">
-                    <h4 class="mt-3">Admin Dhasboard Kuybox</h4>
+                    <h4 class="mt-3">Admin Dhasboard</h4>
                     <div class="border w-25 mx-auto border-primary"></div>
                     <h1 class="">Let's Get Started</h1>
 

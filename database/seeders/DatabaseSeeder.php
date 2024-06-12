@@ -16,10 +16,10 @@ class DatabaseSeeder extends Seeder
         $this->call(UserSeeder::class);
         $this->call(ContactSeeder::class);
         $this->call(GalerySeeder::class);
+        $this->call(KategoriSeeder::class);
         $this->call(BlogSeeder::class);
         $this->call(SettingSeeder::class);
         $this->call(AboutListSeeder::class);
         $this->call(SliderSeeder::class);
-        $this->call(MemberSeeder::class);
     }
 }
